@@ -2,6 +2,8 @@ package testcases;
 
 import base.LaunchBrowser;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
 import utilities.ReadXlsData;
 
@@ -14,7 +16,10 @@ public class SimpleTestCase extends LaunchBrowser {
         driver.findElement(By.id(ploc.getProperty("loginPasswordId"))).sendKeys("password");
         driver.findElement(By.id(ploc.getProperty("loginButtonId"))).click();
 
+
     }
+
+
       //TestNG data provider. Now we're using reading from xls data
 //    @DataProvider(name="testdata")
 //    public Object[][] tData()
