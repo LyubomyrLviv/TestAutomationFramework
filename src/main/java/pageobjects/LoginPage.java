@@ -2,19 +2,21 @@ package pageobjects;
 
 
 import actiondriver.action.Action;
+import base.BaseClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static base.BaseClass.driver;
-
-public class LoginPage  {
 
 
-    @FindBy(id ="user-name")
+
+public class LoginPage extends BaseClass {
+
+
+    @FindBy(id = "user-name")
     WebElement userName;
 
-    @FindBy(id ="password")
+    @FindBy(id = "password")
     WebElement loginUserPassword;
 
     @FindBy(id="login-button")
@@ -38,12 +40,15 @@ public class LoginPage  {
         return myStoreTitle;
     }
 
+
     public ProductsListPage login (String uname, String pswd)
     {
         Action.type(userName, uname);
         Action.type(loginUserPassword, pswd);
         Action.click(driver, loginButton);
         return new ProductsListPage();
+
+
     }
 
 }

@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.BeforeTest;
+import pageobjects.LoginPage;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -19,6 +20,8 @@ public class BaseClass
     public static Properties prop;
     public static WebDriver driver;
     public static FileInputStream fis;
+
+    //static LoginPage loginPage = new LoginPage();
 
 
 
