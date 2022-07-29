@@ -21,26 +21,26 @@ public class LoginPageTest extends BaseClass {
         launchApp();
     }
 
-//    @AfterMethod
-//    public void tearDown()
-//    {
-//        driver.quit();
-//    }
-//
-//    @Test
-//    public void verifyLogo()
-//    {
-//        loginPage = new LoginPage();
-//        boolean result = loginPage.validateLogo();
-//        Assert.assertTrue(result);
-//    }
-//
-//    @Test
-//    public void verifyTitle()
-//    {
-//        String actTitle = loginPage.getMyStoreTitle();
-//        Assert.assertEquals(actTitle,"Swag Labs");
-//    }
+    @AfterMethod
+    public void tearDown()
+    {
+        driver.quit();
+    }
+
+    @Test
+    public void verifyLogo()
+    {
+        loginPage = new LoginPage();
+        boolean result = loginPage.validateLogo();
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void verifyTitle()
+    {
+        String actTitle = loginPage.getMyStoreTitle();
+        Assert.assertEquals(actTitle,"Swag Labs");
+    }
 
     @Test
     public void loginTest()
