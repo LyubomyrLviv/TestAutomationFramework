@@ -16,16 +16,10 @@ public class LoginPageTest extends BaseClass {
     LoginPage loginPage;
 
     @BeforeMethod
-    public void setup()
-    {
-        launchApp();
-    }
+    public void setup()        {launchApp(); }
 
     @AfterMethod
-    public void tearDown()
-    {
-        driver.quit();
-    }
+    public void tearDown()    {driver.quit();}
 
     @Test
     public void verifyLogo()

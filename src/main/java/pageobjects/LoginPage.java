@@ -40,6 +40,12 @@ public class LoginPage extends BaseClass {
         return myStoreTitle;
     }
 
+    public String getLoginPageUrl()
+    {
+        String currentLoginPageUrl = driver.getCurrentUrl();
+        return currentLoginPageUrl;
+    }
+
 
     public ProductsListPage login (String uname, String pswd)
     {
