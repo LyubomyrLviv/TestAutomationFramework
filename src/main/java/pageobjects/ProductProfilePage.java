@@ -2,6 +2,7 @@ package pageobjects;
 
 import actiondriver.action.Action;
 import base.BaseClass;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -35,7 +36,8 @@ public class ProductProfilePage extends BaseClass {
 //        productProfilePage = new ProductProfilePage();
         productsListPage = loginPage.login(prop.getProperty("username"),prop.getProperty("password"));
         productsListPage.goToProdDetails();
-        Action.click(driver, addTCartProductPage);
+        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+//        Action.click(driver, addTCartProductPage);
 
     }
 
