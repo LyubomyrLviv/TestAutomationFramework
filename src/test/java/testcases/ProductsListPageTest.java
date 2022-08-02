@@ -32,6 +32,16 @@ public class ProductsListPageTest extends BaseClass {
         Assert.assertEquals(cLoginPageUrl, actLoginPageUrl);
 
     }
+    @Test
+    public void addToCartTest()
+    {
+        productsListPage = new ProductsListPage();
+        loginPage = new LoginPage();
+        loginPage.login(prop.getProperty("username"),prop.getProperty("password"));
+        productsListPage.addToCart();
+    }
+
+
 
 
 }
